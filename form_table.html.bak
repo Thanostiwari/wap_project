@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+   <style type="text/css">
+   
+    body{
+   background-image:  url("rpg.jpg");
+   width:100%;
+   height:100%;
+   background-repeat: no-repeat;
+   background-size: cover;
+   }
+   </style>
+ </head>
+<script type = "text/javascript">
+         <!--
+      // Form validation code will come here.
+      function validate() {
+      
+         if( document.myForm.Name.value == "" ) {
+            alert( "Please provide your name!" );
+            document.myForm.Name.focus() ;
+            return false;
+         }
+         if( document.myForm.EMail.value == "" ) {
+            alert( "Please provide your Email!" );
+            document.myForm.EMail.focus() ;
+            return false;
+         }
+         if( document.myForm.Zip.value == "" || isNaN( document.myForm.Zip.value ) ||
+            document.myForm.Zip.value.length != 6 ) {
+            
+            alert( "Please provide a zip in the format ######." );
+            document.myForm.Zip.focus() ;
+            return false;
+         }
+		 if( document.myForm.Name.value == "" ) {
+            alert( "Please provide your Address!" );
+            document.myForm.Name.focus() ;
+            return false;
+			}
+         if( document.myForm.Country.value == "-1" ) {
+            alert( "Please provide your country!" );
+            return false;
+         }
+         return( true );
+      }
+   //-->
+      </script>      
+   </head>
+   
+   <body>
+      <form action = "login.html" name = "myForm" onsubmit = "return(validate());">
+	  <nav>
+  <div class="header" align="center">
+  <h1><h1><big><br><br>Personal Details<br><br><br><br><br>
+  </div>
+   <nav>
+         <table cellspacing = "2" cellpadding = "2" border = "0" align="center" valign="bottom">
+            
+            <tr>
+               <td align = "right">Name</td>
+               <td><input type = "text" name = "Name" /></td>
+            </tr>
+			 <tr>
+               <td align = "right">Password</td>
+               <td><input type = "password" name = "pwd" /></td>
+			 </tr>
+            
+            <tr>
+               <td align = "right">E-Mail</td>
+               <td><input type = "text" name = "E-Mail" /></td>
+            </tr>
+			<tr>
+               <td align = "right">Address</td>
+               <td><input type = "text" name = "Address" /></td>
+            </tr>
+            
+            <tr>
+               <td align = "right">Zip Code</td>
+               <td><input type = "text" name = "Zip" /></td>
+			 </tr>
+            
+            <tr>
+               <td align = "right">Country</td>
+               <td>
+                  <select name = "Country">
+                     <option value = "-1" selected>[choose yours]</option>
+                     <option value = "1">USA</option>
+                     <option value = "2">UK</option>
+                     <option value = "3">INDIA</option>
+					 <option value = "4">CANADA</option>
+					 <option value = "5">FRANCE</option>
+					 <option value = "6">PAKISTAN</option>
+                  </select>
+               </td>
+            </tr>
+            
+            <tr>
+               <td align = "right"></td>
+
+               <td><input type="reset">&nbsp;
+			   <input type = "submit" value = "Register" /></td>
+            </tr>
+            
+         </table>
+ 
+
+</form>
+ </body>
+</html>
