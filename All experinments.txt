@@ -1,0 +1,336 @@
+Ex-1
+package java_all_practicles;
+import java.util.Scanner;
+
+
+public class Area_of_circle {
+
+  public static void main(String[] args) {
+    float r,a;
+    Scanner ht=new Scanner(System.in);
+    
+    System.out.println("Enter the Radius");
+    r=ht.nextInt();
+    a=(float)(3.142)*r*r;
+    System.out.println("The value of area of circle is : " +a);
+    
+  }
+
+}
+
+ex 2
+package java_all_practicles;
+import java.util.Scanner;
+
+
+public class Arithmatic_operations {
+
+  public static void main(String[] args) {
+    int first,sec,add,sub,mul;
+    float div;
+    Scanner ar=new Scanner(System.in);
+    System.out.println("Enter Two Numbers");
+    first=ar.nextInt();
+    sec=ar.nextInt();
+    add=first+sec;
+    sub=first-sec;
+    mul=first*sec;
+    div=(float) first/sec;
+    System.out.println("The addition is :"+add );
+    System.out.println("The subtraction is :"+sub );
+    System.out.println("The multiplication is :"+mul );
+    System.out.println("The division is :" +div );
+    
+    
+
+  }
+
+ex 3
+package java_all_practicles;
+
+public class Array 
+{
+   
+   public static void main(String[] args) 
+   {
+      int [] a= {1,-3,4,8,-1,9,5,-7};
+      System.out.println("The array elements are:");
+      for (int i=0;i<a.length;i++)
+      {
+         System.out.print(a[i] + " ");
+      }
+   }
+
+}
+
+
+ex 4
+package java_all_practicles;
+import java.util.Scanner;
+
+class Employee
+{
+   int id;
+   String name;
+   float Salary;
+}
+
+class Basic_Employee 
+{
+   public static void main(String[] args) 
+   {
+      Scanner sc=new Scanner(System.in);
+      System.out.println("Enter How many employees:");
+      int k= sc.nextInt();
+      
+      Employee emp[] = new Employee[k];
+      
+      for (int i=0; i<k; i++) 
+      {
+         emp[i]= new Employee ();
+         System.out.println("\nEnter "+ (i+1) +" Employee Data");
+         System.out.print("Enter employee id: ");
+         emp[i].id = sc.nextInt (); 
+         System.out.print("Enter employee name: ");
+         emp [i].name = sc.next();
+         System.out.print("Enter employee salary: "); 
+         emp [i].Salary = sc.nextFloat();
+      }
+
+      System.out.println("\n\n== All employee details are==");
+
+      for (int i = 0; i <k; i++) 
+      {
+         System.out.println("\nEmployee id: " + emp[i].id);
+         System.out.println("Employee name: " + emp[i].name);
+         System.out.println("Employee salary: " + emp[i].Salary);
+      }
+   }
+}
+
+
+ex 5
+package java_all_practicles;
+import java.io.*;
+
+public class Exception_handling 
+{  
+   
+   public static void main(String[] args)
+   {
+      try {
+         int number[] =new int[10];
+         number[10] = 30/0;
+      }
+      catch (ArithmeticException e) {
+         System.out.println("Zero can not divide by a number");
+      }
+      catch (ArrayIndexOutOfBoundsException e) {
+         System.out.println("Index out of size of the array");
+      }
+   }
+}
+
+ex 6
+package java_all_practicles;
+
+public class Fibonacci 
+{
+   public static void main(String[] args) 
+   {
+      int count = 10, num1 = 0, num2 = 1;
+
+      System.out.print("Fibonacci Series of "+count+" numbers:\n");
+
+      for (int i = 1; i <= count; i++)
+      {
+            System.out.print (num1+" ");
+            int sumOfPrevTwo =num1 + num2; 
+            num1= num2;
+
+            num2 =sumOfPrevTwo;
+      }
+   }
+}
+
+
+ex 7
+package java_all_practicles;
+
+   class Car 
+   {  
+      Car()
+      {
+         System.out.println("class: car");
+      }
+      public void vehicletype()
+      {
+         System.out.println("Type: HUAYARA");
+      }
+   }  
+   class PAGANI extends Car
+   {
+      public void Brand()
+      {
+         System.out.println("brand:PAGANI");
+      }
+      public void speed()
+      {
+         System.out.print("speed: 383km/hr");
+      }
+   }
+   class PAGANI_HUAYRA extends PAGANI
+   {
+      public void Brand()
+      {
+         System.out.println("Brand : PAGANI HUAYRA");
+      }
+      
+      public void speed()
+      {
+         System.out.println("Speed : 238 mph");
+      }
+   }
+      
+      public class Mul_inherentence {    
+      public static void main(String[] args) 
+      {
+         PAGANI_HUAYRA ob= new PAGANI_HUAYRA();
+            ob.speed();
+            ob.Brand();
+            ob.vehicletype();
+
+      }
+
+      }
+
+
+ex 8
+package java_all_practicles;
+import java.util.Scanner; 
+
+public class PrimeNo
+{
+   private static boolean prime;
+   public static void main(String[] args) 
+   {
+      Scanner sc = new Scanner (System.in);
+      System.out.print("Enter the value: ");
+      int n = sc.nextInt();
+      for (int i=2; i<=n; i++)      
+      {        
+         prime=true;       
+         for(int j=2; j<i; j++)
+         {
+            if (i%j==0)
+            {
+               prime=false;
+               break;
+            }
+         }
+         if(prime)
+         {
+            System.out.println(i);
+         }
+      }
+   }
+}
+
+
+ex 9
+package java_all_practicles;
+import java.util.Scanner;
+
+public class String_practice {
+   
+   public static void main(String[] args)
+   {
+      Scanner Str= new Scanner(System.in);
+      System.out.println("Enter the string:");
+      String Str1= Str.next();
+      
+      System.out.println(Str1);
+      System.out.println("The length of the string is:"+ Str1.length());
+      
+      StringBuffer obj1 = new StringBuffer(Str1);
+      obj1.reverse();
+      System.out.println("The reverse of the string is " + obj1);
+      
+      StringBuilder obj2 = new StringBuilder(Str1);
+      obj2.reverse();
+      String rev = obj2.toString();
+      
+      if(Str1.equals(rev)){
+         System.out.println("String is Palandrome");
+      }
+      else {
+         System.out.println("String is not a Palandrome");
+      }
+   }
+}
+
+ex 10
+package java_all_practicles;
+import java.util.Scanner;
+class studentdetails
+{
+   int rn;
+   String name,cl;
+   Scanner sc=new Scanner(System.in);
+   void input()
+   {
+      System.out.println("Enter the roll no : ");
+      rn=sc.nextInt();
+      
+      System.out.println("Enter the name : ");
+      name=sc.next();
+      
+      System.out.println("The class of the student : ");
+      cl=sc.next();
+   }           
+}
+class Student extends studentdetails
+{
+   void display()
+   {
+      System.out.println("The roll no is :" +rn);
+      System.out.println("The name of student is :" +name );
+      System.out.println("The class of student is :" +cl);   
+   }
+   
+   public static void main(String[] args)
+   {
+      Student s1= new Student();
+      s1.input();
+      s1.display();
+   }     
+   }
+   
+
+ex 11
+package java_all_practicles;
+
+public class VowelCount 
+{
+   public static void main(String[] args) 
+   {
+      String Str = "Count the vowels from this sentence.";
+      System.out.println("Your string is: " + Str);
+      Str = Str.toLowerCase();
+      int length= Str.length();
+      int count=0;
+      char ch;
+      
+      for(int i=0; i<length; i++) 
+      {
+         ch=Str.charAt(i);
+         if(ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u')
+         {
+            count++;
+         }
+      }
+      System.out.print("No. of vowels: " + count);
+   }
+
+}
+
